@@ -46,7 +46,7 @@ function GridOfPosts() {
             setP2('')
             break
         case 1:
-            setP0('Paragraph 1')
+            setP0('Natalie started learning how to bike!')
             setP1('Paragraph 2')
             setP2('Paragraph 3')
             break
