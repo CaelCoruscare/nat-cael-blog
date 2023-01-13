@@ -1,8 +1,9 @@
-import { Card, Avatar, Skeleton, CardMedia, Typography, CardContent, Button, CardActions, Stack } from "@mui/material";
+import { Divider, Box, Card, Avatar, Skeleton, CardMedia, Typography, CardContent, Button, CardActions, Stack, CardActionArea, Fade } from "@mui/material";
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 
 import caelAvatar from './avatars/avatarCael.jpg'
 import natAvatar from './avatars/avatarNatalie.jpg'
+import Image from 'mui-image'
 
 
 function ArticleCard(props) {
@@ -12,29 +13,42 @@ function ArticleCard(props) {
           true ? (
             <Grid2 xs={3} >
               <Card elevation={3} sx={{ height: 1 }}>
-                <CardMedia
+
+              <CardActionArea onClick={props.handleOpenPost}>
+                <Box sx={{bgcolor:'#989f40'}}>
+                <Fade in timeout={1500} >
+                  <CardMedia
                   sx={{ height: 200 }}
                   image={props.img}
-                  title="green iguana"
                 />
+                </Fade>
+                </Box>
 
-                <CardContent>
+                <CardContent >
                 <Stack direction="row" spacing={2}>
                   <Avatar alt="Nat or Cael" src={avatar} />
-                  <Typography gutterBottom variant="h5" component="div">
+                  <Typography gutterBottom variant="h5" component="div" 
+                  sx={{fontSize:'1.5vw'}}>
                     {props.title} 
                   </Typography>
                 </Stack>
                 </CardContent>
-
+                
+  <Divider />
                 <CardContent>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" 
+                  sx={{ 
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    display: '-webkit-box',
+                    WebkitLineClamp: '3',
+                    WebkitBoxOrient: 'vertical'
+                   }}>
                     {props.summary}
                   </Typography>
-                  <CardActions>
-                    <Button size="small" variant="outlined" onClick={props.handleOpenPost}>Read</Button>
-                  </CardActions>
                 </CardContent>
+
+                </CardActionArea>
               </Card>
             </Grid2>
           ) : (
