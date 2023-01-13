@@ -41,7 +41,7 @@ function GridOfPosts() {
     function assignParagraphs(postNum){
         switch (postNum){
         case 0:
-            setP0('We decided to travel to the island of Huahine. The island is much like the better-known island of Bora Bora in terms of climate and terrain, but is not built up as a tourism spot. Instead of over-the-water bungalows there are home stays, and most of the islands ~6000 residents do not work in the tourism industry.');
+            setP0('We\'ve decided to travel from Tahiti to the island of Huahine. The island is much like the better-known island of Bora Bora in terms of climate and terrain, but is not built up as a tourism spot. Instead of over-the-water bungalows there are home stays, and most of the islands ~6000 residents do not work in the tourism industry.');
             setP1('We wanted to continue traveling with our friend Leander, but found it difficult to find a place with two rooms open. There was some confusion in which we ended up separately booking the same exact room. This happened because Natalie and I booked online, and Leander booked over the phone after being swapped between several different numbers “my friend might have a room, call them at this number… my mother in law may have a room, call her at this number”. Thankfully the host was gracious enough to offer to pull an additional mattress into the room for a slightly higher cost per night.')
             setP2('')
             break
@@ -68,10 +68,10 @@ function GridOfPosts() {
     return (
     <div>
         <Grid2 container spacing={2}>
-            <ArticleCard author='cael' title='Arrival in Huahine' handleOpenPost={() => handleOpenPost(0)} img='/content/arrivalInHuahine/inFrontOfThePlane.jpg' summary='We have an interesting time finding a room, continue traveling with our friend Leander, and Natalie faces her fears by traveling on a small plane.'/>
-            <ArticleCard author='nat' title='Learning to Ride a Bike' handleOpenPost={() => handleOpenPost(1)} img='/content/huahineLearningToBike/learningToBike.jpeg'/>
-            <ArticleCard author='cael' title='Arrival in Huahine'/>
-            <ArticleCard author='nat' title='Learning to Ride a Bike'/>
+            <ArticleCard author='cael' title='Arrival in Huahine' handleOpenPost={() => handleOpenPost(0)} img='/content/arrivalInHuahine/inFrontOfThePlane.jpg' summary="We've decided to travel from Tahiti to the island of Huahine. The island is much like the better-known island of Bora Bora in terms of climate and terrain, but is not built up as a tourism spot. Instead of over-the-water bungalows there are home stays, and most of the islands ~6000 residents do not work in the tourism industry."/>
+            <ArticleCard author='nat' title='Learning to Ride a Bike' handleOpenPost={() => handleOpenPost(1)} img='/content/huahineLearningToBike/learningToBike.jpeg' summary="Natalie started learning how to bike!"/>
+            <ArticleCard author='cael' title='Landlubbers on the Ferry' />
+            <ArticleCard author='nat' title='Snorkeling at the Coral Gardens'/>
         </Grid2>
 
         <Dialog
@@ -85,7 +85,9 @@ function GridOfPosts() {
             handleClosePost={handleClosePost}
             img0={img0}
             p0={p0}
+            img1={img1}
             p1={p1}
+            img2={img2}
             p2={p2}
             />
 

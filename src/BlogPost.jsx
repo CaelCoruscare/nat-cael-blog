@@ -4,6 +4,7 @@ import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Image from 'mui-image'
 import Slide from '@mui/material/Slide';
 import CloseIcon from '@mui/icons-material/Close';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import caelAvatar from './avatars/avatarCael.jpg'
 import natAvatar from './avatars/avatarNatalie.jpg'
@@ -24,16 +25,16 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
   return (
           true ? (
-            <div>
-                
+            <Box
+            sx={{
+                backgroundColor:'#2291bd'}}
+            >
                 
                 <Image
                 height='80vh' 
                 fit='contain'
                 src={props.img0}
-                title="green iguana"
                 duration={1800}
-                bgColor='#2291bd'
                 />
 
                 <Container maxWidth="md">
@@ -65,13 +66,13 @@ const Transition = React.forwardRef(function Transition(props, ref) {
             sx={{
                 position: 'fixed',
                 top: 0,
-                right: 0,
+                left: 20,
             }}
             aria-label="close"
             >
-                <CloseIcon />
+                <ArrowBackIcon sx={{ fontSize: 32, color: '#ede1b5' }} />
             </IconButton>
-            </div>
+            </Box>
           ) : (
               <Skeleton variant="rectangular" width={210} height={118} />
             )
