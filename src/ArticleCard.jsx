@@ -34,7 +34,8 @@ function ArticleCard(props) {
                 <Stack direction="row" spacing={2}>
                   <Avatar alt="Nat or Cael" src={avatar} />
                   <Typography gutterBottom variant="h5" component="div" 
-                  sx={{fontSize:'1.5vw'}}>
+                  sx={{fontSize:'1.2w'}}
+                  md={{fontSize:'0.3vw'}}>
                     {props.data.title} 
                   </Typography>
                 </Stack>
