@@ -13,6 +13,7 @@ import natAvatar from './avatars/avatarNatalie.jpg'
 function BlogPost(props) {
   const avatar = (props.author === 'cael' ) ? caelAvatar : natAvatar;
   const [open, setOpen] = React.useState(false);
+  const { loading = false } = props;
 
   
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -24,7 +25,11 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   };
 
   return (
-          true ? (
+          loading ? (
+            <Skeleton variant="rectangular" width={210} height={118} />
+          )
+          :
+          (
             <Box
             sx={{
                 backgroundColor:'#2291bd'}}
@@ -73,9 +78,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
                 <ArrowBackIcon sx={{ fontSize: 32, color: '#ede1b5' }} />
             </IconButton>
             </Box>
-          ) : (
-              <Skeleton variant="rectangular" width={210} height={118} />
-            )
+          )
   );
   }
   
