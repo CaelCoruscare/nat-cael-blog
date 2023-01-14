@@ -11,7 +11,7 @@ function ArticleCard(props) {
   const { loading = false } = props;
 
   return (
-            <Grid2 xs={3} >
+            <Grid2 xs={6} md={3} >
               <Card elevation={3} sx={{ height: 1 }}>
 
               <CardActionArea onClick={props.handleOpenPost}>
@@ -24,7 +24,7 @@ function ArticleCard(props) {
                 <Image
                 height='24vh' 
                 fit='cover'
-                src={props.img}
+                src={props.data.imag0}
                 duration={1800}
                 bgColor='#989f40'
                 />
@@ -35,7 +35,7 @@ function ArticleCard(props) {
                   <Avatar alt="Nat or Cael" src={avatar} />
                   <Typography gutterBottom variant="h5" component="div" 
                   sx={{fontSize:'1.5vw'}}>
-                    {props.title} 
+                    {props.data.title} 
                   </Typography>
                 </Stack>
                 </CardContent>
@@ -50,7 +50,7 @@ function ArticleCard(props) {
                     WebkitLineClamp: '3',
                     WebkitBoxOrient: 'vertical'
                    }}>
-                    {props.summary}
+                    {props.data.par0}
                   </Typography>
                 </CardContent>
 
