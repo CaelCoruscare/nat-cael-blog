@@ -25,22 +25,24 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   };
 
   return (
-          loading ? (
-            <Skeleton variant="rectangular" width={210} height={118} />
-          )
-          :
-          (
+          
             <Box
             sx={{
-                backgroundColor:'#2291bd'}}
+                backgroundColor:'#519ece'}}
             >
-                
+                {loading ? (
+                    <Skeleton variant="rectangular" animation='wave' height='80vh'
+                    sx={{ bgcolor: '#c5d7d6' }} />
+                )
+                :
+                (
                 <Image
                 height='80vh' 
                 fit='contain'
                 src={props.img0}
                 duration={1800}
                 />
+                )}
 
                 <Container maxWidth="md">
                     <Stack direction="row" spacing={2} sx={{padding: 3}}>
@@ -78,7 +80,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
                 <ArrowBackIcon sx={{ fontSize: 32, color: '#ede1b5' }} />
             </IconButton>
             </Box>
-          )
   );
   }
   
