@@ -28,15 +28,16 @@ const Transition = React.forwardRef(function Transition(props, ref) {
           
             <Box
             sx={{
-                backgroundColor:'#519ece'}}
+                backgroundColor:'#3ba3bf'}}
             >
                 {loading ? (
                     <Skeleton variant="rectangular" animation='wave' height='80vh'
-                    sx={{ bgcolor: '#c5d7d6' }} />
+                     />
                 )
                 :
                 (
                 <Image
+                bgColor={'#64d4e4'}
                 height='80vh' 
                 fit='contain'
                 src={props.img0}
@@ -52,7 +53,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
                         </Typography>
                     </Stack>
 
-                    <Paper sx={{padding: 2}}>
+                    <Paper sx={{padding: 2, bgcolor:'#f3faf9'}}>
                         <Typography variant="body1" color="text.secondary" gutterBottom>
                             {props.p0}
                         </Typography>
@@ -77,7 +78,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
             }}
             aria-label="close"
             >
-                <ArrowBackIcon sx={{ fontSize: 32, color: '#ede1b5' }} />
+                <ArrowBackIcon sx={{ fontSize: 32, color: 'black' }} />
             </IconButton>
             </Box>
   );

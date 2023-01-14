@@ -8,15 +8,19 @@ import Image from 'mui-image'
 
 function ArticleCard(props) {
   const avatar = (props.author === 'cael' ) ? caelAvatar : natAvatar;
+  const { loading = false } = props;
 
   return (
-          true ? (
             <Grid2 xs={3} >
               <Card elevation={3} sx={{ height: 1 }}>
 
               <CardActionArea onClick={props.handleOpenPost}>
                 
-
+              {true ? (
+                    <Skeleton variant="rectangular" animation='wave' height='80vh'/>
+                )
+                :
+                (
                 <Image
                 height='24vh' 
                 fit='cover'
@@ -24,6 +28,7 @@ function ArticleCard(props) {
                 duration={1800}
                 bgColor='#989f40'
                 />
+                )}
 
                 <CardContent >
                 <Stack direction="row" spacing={2}>
@@ -52,9 +57,7 @@ function ArticleCard(props) {
                 </CardActionArea>
               </Card>
             </Grid2>
-          ) : (
-              <Skeleton variant="rectangular" width={210} height={118} />
-            )
+          
   );
   }
   
