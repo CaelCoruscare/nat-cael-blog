@@ -16,8 +16,8 @@ function ArticleCard(props) {
 
               <CardActionArea onClick={props.handleOpenPost}>
                 
-              {true ? (
-                    <Skeleton variant="rectangular" animation='wave' height='80vh'/>
+              {loading ? (
+                    <Skeleton variant="rectangular" animation='wave' height='24vh'/>
                 )
                 :
                 (
