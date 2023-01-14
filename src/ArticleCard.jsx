@@ -15,14 +15,15 @@ function ArticleCard(props) {
               <Card elevation={3} sx={{ height: 1 }}>
 
               <CardActionArea onClick={props.handleOpenPost}>
-                <Box sx={{bgcolor:'#989f40'}}>
-                <Fade in timeout={1500} >
-                  <CardMedia
-                  sx={{ height: 200 }}
-                  image={props.img}
+                
+
+                <Image
+                height='24vh' 
+                fit='cover'
+                src={props.img}
+                duration={1800}
+                bgColor='#989f40'
                 />
-                </Fade>
-                </Box>
 
                 <CardContent >
                 <Stack direction="row" spacing={2}>
