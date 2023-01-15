@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Card, Avatar, Skeleton, CardMedia, Typography, CardContent, Button, Dialog, Stack, Box, Paper, Container, IconButton } from "@mui/material";
+import { Divider, Avatar, Skeleton, CardMedia, Typography, CardContent, Button, Dialog, Stack, Box, Paper, Container, IconButton } from "@mui/material";
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Image from 'mui-image'
 import Slide from '@mui/material/Slide';
@@ -11,7 +11,7 @@ import natAvatar from './avatars/avatarNatalie.jpg'
 
 
 function BlogPost(props) {
-  const avatar = (props.author === 'cael' ) ? caelAvatar : natAvatar;
+  const avatar = (props.data.author === 'cael' ) ? caelAvatar : natAvatar;
   const [open, setOpen] = React.useState(false);
   const { loading = false } = props;
 
@@ -40,28 +40,74 @@ const Transition = React.forwardRef(function Transition(props, ref) {
                 bgColor={'#64d4e4'}
                 height='80vh' 
                 fit='contain'
-                src={props.img0}
+                src={props.data.imag0}
                 duration={1800}
                 />
                 )}
 
                 <Container maxWidth="md">
                     <Stack direction="row" spacing={2} sx={{padding: 3}}>
-                        <Avatar alt="Nat or Cael" src={caelAvatar}/>
+                        <Avatar alt="Nat or Cael" src={avatar}/>
                         <Typography variant="h5" component="div">
-                            {'Arrival in Huahine'} 
+                            {props.data.title} 
                         </Typography>
                     </Stack>
 
-                    <Paper sx={{padding: 2, bgcolor:'#f3faf9'}}>
-                        <Typography variant="body1" color="text.secondary" gutterBottom>
-                            {props.p0}
+                    <Paper sx={{padding: 2, paddingTop: 0, bgcolor:'#f3faf9'}}>
+                        <Typography variant="body1" color="text.secondary" gutterBottom
+                        sx={{paddingTop: 2, paddingBottom: 2}}>
+                            {props.data.par0}
                         </Typography>
-                        <Typography variant="body1" color="text.secondary" gutterBottom>
-                            {props.p1}
+                        
+                        
+                        <Box>
+                            {(props.data.imag1 === "") ? <Box/> : 
+                                loading ? (
+                                    <Skeleton variant="rectangular" animation='wave' height='50vh'
+                                    />
+                                )
+                                :
+                                (
+                                    <Image
+                                    bgColor={'#64d4e4'}
+                                    height='50vh' 
+                                    fit='cover'
+                                    src={props.data.imag1}
+                                    duration={1800}
+                                    />
+                                )
+
+                            }
+                        </Box>
+
+                        <Typography variant="body1" color="text.secondary" gutterBottom
+                        sx={{paddingTop: 2, paddingBottom: 2}}>
+                            {props.data.par1}
                         </Typography>
-                        <Typography variant="body1" color="text.secondary" gutterBottom>
-                            {props.p2}
+                        
+                        <Box>
+                            {(props.data.imag1 === "") ? <Box/> : 
+                                loading ? (
+                                    <Skeleton variant="rectangular" animation='wave' height='50vh'
+                                    />
+                                )
+                                :
+                                (
+                                    <Image
+                                    bgColor={'#64d4e4'}
+                                    height='50vh' 
+                                    fit='cover'
+                                    src={props.data.imag2}
+                                    duration={1800}
+                                    />
+                                )
+
+                            }
+                        </Box>
+
+                        <Typography variant="body1" color="text.secondary" gutterBottom
+                        sx={{paddingTop: 2, paddingBottom: 2}}>
+                            {props.data.par2}
                             </Typography>
                     </Paper>
 

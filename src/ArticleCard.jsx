@@ -7,7 +7,7 @@ import Image from 'mui-image'
 
 
 function ArticleCard(props) {
-  const avatar = (props.author === 'cael' ) ? caelAvatar : natAvatar;
+  const avatar = (props.data.author === 'cael' ) ? caelAvatar : natAvatar;
   const { loading = false } = props;
 
   return (
@@ -34,7 +34,7 @@ function ArticleCard(props) {
                 <Stack direction="row" spacing={2}>
                   <Avatar alt="Nat or Cael" src={avatar} />
                   <Typography gutterBottom variant="h5" component="div" 
-                  sx={{fontSize:'1.2w'}}
+                  sx={{fontSize:'20px'}}
                   md={{fontSize:'0.3vw'}}>
                     {props.data.title} 
                   </Typography>
