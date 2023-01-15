@@ -22,7 +22,7 @@ function App() {
         </Typography>
       </Box>
 
-      <Paper sx={{padding: 2, margin: 2}}>
+      <Paper sx={{padding: 2, margin: 2, backgroundColor: '#eeeedc'}}>
         <GridOfPosts />
       </Paper>
       </Box>
