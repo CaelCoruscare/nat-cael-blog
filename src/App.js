@@ -9,9 +9,8 @@ function App() {
   return (
       <Box sx={{
         backgroundColor: '#9ba37b',
-        width: '100vw',
-        height: '100vh'
-        
+        paddingBottom: 1,
+        marginTop: -2
         
         }}>
       <Box sx={{backgroundColor: '#ede1b5'}}>
@@ -19,7 +18,7 @@ function App() {
           Nat and Cael's Blog!
         </Typography>
         <Typography variant="h5" component="div" sx={{padding: 2, margin: 2}}>
-          Latest Status: Chilling in Papeete while it rains buckets.
+          Latest Status: Chilling in Dunedin with a hurt toe.
         </Typography>
       </Box>
 

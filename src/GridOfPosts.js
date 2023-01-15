@@ -1,15 +1,10 @@
 import * as React from 'react';
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
-import { Container, Avatar, Skeleton, CardMedia, Typography, CardContent, Button, Dialog, Stack, Form, Paper, IconButton } from '@mui/material';
+import { Dialog, Stack, Form, Paper, IconButton } from '@mui/material';
 import ArticleCard from './ArticleCard';
 import { useState } from 'react';
 import BlogPost from './BlogPost';
-import Image from 'mui-image'
 import Slide from '@mui/material/Slide';
-import CloseIcon from '@mui/icons-material/Close';
-
-import caelAvatar from './avatars/avatarCael.jpg'
-import natAvatar from './avatars/avatarNatalie.jpg'
 
 const data = [
     {title: "Heading to Huahine"
@@ -39,20 +34,20 @@ const data = [
     ,par1: "After trying and failing to find a skilled barber on the island of Huahine, I resolved that I would chop it all off once we returned to the Tahitian city of Papeete. I walked into the salon armed with a picture of a woman with a bob cut and my debit card, and asked that the offending tresses be hacked off. After shearing off all of the hair below my shoulders, the barber paraded the great thick ponytail around like a trophy of war before he proceeded to shampoo and finish my coiffure. I am still getting used to the end result, often trying to tuck hair that no longer exists behind my ears but I also feel unburdened and ready to take on the world."
     ,par2: ""
     },
-    {title: "Meeting Leander"
+    {title: "Meeting Leander & Mt Aorai"
     ,author: "nat"
-    ,imag0: ""
-    ,imag1: ""
-    ,imag2: ""
+    ,imag0: "/content/mountAorai/leanderOnTheTree.jpeg"
+    ,imag1: "/content/mountAorai/viewFromNearBelvedere.jpeg"
+    ,imag2: "/content/mountAorai/popeInDaRestaurant.jpeg"
     ,par0: "Morning broke on our first day in French Polynesia, in the town of Faʻaʻā not far from the island's airport. Somewhat bleary eyed from our marathon of travel we made our way into the dining room for a breakfast of instant coffee and fruit. As we finished our meal we saw the door of Eva's home opening to admit a slim, muscular young man with short blond hair and a growth of beard on his face. He looked exhausted but he opened up when we greeted him, introducing himself as Leander and saying that he was a flight attendant and advocate for disabled children from Germany.  Despite how tired he was he readily agreed to come with us on our attempt to summit Mont Aorai, the third highest peak on Tahiti. Provisioned with dragonfruit and mixed nuts from the market, we set off for the nearby town of Perai after Eva gave us the directions to O'Belvedere Restaurant, the starting point of the hike. We took the bus and then we embarked on what quickly began to feel like a forced march rather than a pleasurable excursion."
     ,par1: "What we had assumed would be a quick walk to the restaurant proved to be a torturous slog of 11 km up the foothills of the mountain we hoped to climb. The pavement was far more punishing to our legs than soil and rocks would have been, each step sending a fresh wave of dull pain through our ankles, knees and hips. The sun beat down on us as we tromped up the road, relieved only by occasional islands of shade as the path grew steeper and steeper. We stopped to eat our provisions and rest, sure that our salvation was only 80 meters away after consulting google maps. This proved to be incorrect and we had to trudge several more kilometers before reaching the restaurant, too exhausted to even contemplate traveling further. Instead we ate lunch (burgers for the boys and a goat cheese salad for me) and took a taxi home. Following this, Leander collapsed in his bed and refused to stir for the rest of the day."
     ,par2: ""
     },
-    {title: "Saying Goodbye to Leander"
+    {title: "Hanging with Leander"
     ,author: "nat"
-    ,imag0: ""
-    ,imag1: ""
-    ,imag2: ""
+    ,imag0: "/content/mountainTemples/crazyInTheBackground.jpeg"
+    ,imag1: "/content/mountainTemples/fourArms.jpeg"
+    ,imag2: "/content/mountainTemples/thePath.jpeg"
     ,par0: "Once he had recovered from his exhaustion, Leander proved to be an amazing travel companion, always full of interesting stories and possessed of a sharp, often dark sense of humor that was as funny as it was shockingly innappropriate. We journeyed to the black sand beach at Venus Point, and worked together to find flights to Huahine and accommodations in a local woman's home. We shared expenses and a room on the island, and we feel we developed an enduring bond of friendship through our shared adventures. When the blisters I developed from a pair of cheap supermarket flip flops grew unbearably painful after breaking, Leander sat me down and assiduously cleaned them out before disinfecting and bandaging them so they could heal properly. "
     ,par1: "Following our ignominious failure at Aorai on Tahiti, we were determined to succeed in hiking up at least one French Polynesian peak and settled on one in Maeva near our bedsit, that took us up to beautiful old temples built of basalt high on the cloud shrouded slopes that gave us an amazing view of the coconut palm studded lowlands below. As amazing as the ascent was, we got lost on the way down and ended up having to bushwhack a path through the tangled undergrowth towards the road, only to see a beautifully manicured path meters from where we had burst out of the trees, which elicited a joint chorus of disbelieving laughter and exclamations of \"you're fucking kidding me.\" "
     ,par2: "We spent the rest of that day exploring the town of Fare together, knowing it was our last evening before we had to part ways. As we hugged him before his flight from the tiny airport on Huahine, Cael and I both felt sad to be parting from our new companion so quickly and expressed the hope of seeing him if our paths crossed during our travels. In Leander we have made a great new friend, and hope that we will see him again one day soon. "
@@ -90,10 +85,11 @@ function GridOfPosts() {
     return (
     <div>
         <Grid2 container spacing={2}>
+            <ArticleCard data={data[3]} handleOpenPost={() => handleOpenPost(3)}/>
             <ArticleCard data={data[0]} handleOpenPost={() => handleOpenPost(0)}/>
             <ArticleCard data={data[1]} handleOpenPost={() => handleOpenPost(1)}/>
             <ArticleCard data={data[2]} handleOpenPost={() => handleOpenPost(2)}/>
-            <ArticleCard data={data[3]} title='Snorkeling at the Coral Gardens'/>
+            <ArticleCard data={data[4]} handleOpenPost={() => handleOpenPost(4)}/>
         </Grid2>
 
         <Dialog
