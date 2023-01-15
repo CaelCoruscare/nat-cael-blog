@@ -63,14 +63,14 @@ const Transition = React.forwardRef(function Transition(props, ref) {
                         <Box>
                             {(props.data.imag1 === "") ? <Box/> : 
                                 loading ? (
-                                    <Skeleton variant="rectangular" animation='wave' height='50vh'
+                                    <Skeleton variant="rectangular" animation='wave' height='70vh'
                                     />
                                 )
                                 :
                                 (
                                     <Image
                                     bgColor={'#64d4e4'}
-                                    height='50vh' 
+                                    height='70vh' 
                                     fit='cover'
                                     src={props.data.imag1}
                                     duration={1800}
@@ -86,7 +86,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
                         </Typography>
                         
                         <Box>
-                            {(props.data.imag1 === "") ? <Box/> : 
+                            {(props.data.imag2 === "") ? <Box/> : 
                                 loading ? (
                                     <Skeleton variant="rectangular" animation='wave' height='50vh'
                                     />
