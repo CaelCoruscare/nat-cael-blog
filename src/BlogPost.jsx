@@ -40,7 +40,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
                 bgColor={'#64d4e4'}
                 height='80vh' 
                 fit='contain'
-                src={props.data.imag0}
+                src={"/content/" + props.data.imag0}
                 duration={1800}
                 />
                 )}
@@ -72,7 +72,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
                                     bgColor={'#64d4e4'}
                                     height='70vh' 
                                     fit='cover'
-                                    src={props.data.imag1}
+                                    src={"/content/" + props.data.imag1}
                                     duration={1800}
                                     />
                                 )
@@ -97,7 +97,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
                                     bgColor={'#64d4e4'}
                                     height='50vh' 
                                     fit='cover'
-                                    src={props.data.imag2}
+                                    src={"/content/" + props.data.imag2}
                                     duration={1800}
                                     />
                                 )

@@ -24,7 +24,7 @@ function ArticleCard(props) {
                 <Image
                 height='24vh' 
                 fit='cover'
-                src={props.data.imag0}
+                src={"/content/" + props.data.imag0}
                 duration={1800}
                 bgColor='#989f40'
                 />
