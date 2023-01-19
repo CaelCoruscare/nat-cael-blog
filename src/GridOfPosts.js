@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
-import { Dialog, Stack, Form, Paper, IconButton } from '@mui/material';
+import { Dialog, Stack, Form, Paper, IconButton, Badge } from '@mui/material';
 import ArticleCard from './ArticleCard';
 import { useState } from 'react';
 import BlogPost from './BlogPost';
@@ -9,6 +9,7 @@ import Slide from '@mui/material/Slide';
 const posts = [
     {title: "Heading to Huahine"
     ,author: "cael"
+    ,date: "2023-01-08T00:00:00.000Z"
     ,imag0: "arrivalInHuahine/inFrontOfThePlane.jpg"
     ,imag1: "arrivalInHuahine/chattingOnThePorch.jpeg"
     ,imag2: "arrivalInHuahine/tableInside.jpeg"
@@ -18,6 +19,7 @@ const posts = [
     },
     {title: "Learning to Ride a Bike"
     ,author: "nat"
+    ,date: "2023-01-10T10:00:00.000Z"
     ,imag0: "huahineLearningToBike/learningToBike.jpeg"
     ,imag1: "huahineLearningToBike/bikingLearningArea.jpeg"
     ,imag2: ""
@@ -27,6 +29,7 @@ const posts = [
     },
     {title: "Cutting Off Most of My Hair"
     ,author: "nat"
+    ,date: "2023-01-12T00:00:00.000Z"
     ,imag0: "haircut/haircutInARestaurant.jpg"
     ,imag1: "haircut/beforeNAfter.jpg"
     ,imag2: ""
@@ -36,6 +39,7 @@ const posts = [
     },
     {title: "Meeting Leander & Mt Aorai"
     ,author: "nat"
+    ,date: "2023-01-06T00:00:00.000Z"
     ,imag0: "mountAorai/leanderOnTheTree.jpeg"
     ,imag1: "mountAorai/viewFromNearBelvedere.jpeg"
     ,imag2: "mountAorai/popeInDaRestaurant.jpeg"
@@ -45,6 +49,7 @@ const posts = [
     },
     {title: "Hanging with Leander"
     ,author: "nat"
+    ,date: "2023-01-11T00:00:00.000Z"
     ,imag0: "mountainTemples/crazyInTheBackground.jpeg"
     ,imag1: "mountainTemples/fourArms.jpeg"
     ,imag2: "mountainTemples/thePath.jpeg"
@@ -54,32 +59,37 @@ const posts = [
     },
     {title: "Birds in Huahine"
     ,author: "cael"
-    ,imag0: ""
-    ,imag1: ""
-    ,imag2: ""
-    ,par0: ""
+    ,date: "2023-01-09T00:00:00.000Z"
+    ,imag0: "birdsOfHuahine/mynahBird.jpeg"
+    ,imag1: "birdsOfHuahine/mePretty.jpeg"
+    ,imag2: "birdsOfHuahine/bul-bulBird.jpeg"
+    ,par0: "Lots of birds at the cabin. I am typing this as a placeholder. Blah  Hello My name is Cael you click my post, prepare to read."
     ,par1: ""
     ,par2: ""
     },
     {title: "Beach at Coral Gardens"
     ,author: "cael"
+    ,date: "2023-01-10T00:00:00.000Z"
     ,imag0: "/coralGardenBeach/coralCrab.jpeg"
     ,imag1: "/coralGardenBeach/natalieOnBeach.jpeg"
     ,imag2: "/coralGardenBeach/viewOfBeach.jpeg"
     ,par0: "Check out this really cute hermit crab that we found! Instead of a snail shell for a home, they found a piece of coral to live in. There were hundreds of these tiny hermit crabs crawling along the beach. No large ones though. For some reason, we didn't see much in the way of large shells, so perhaps it had something to do with that?"
     ,par1: "Natalie enjoyed the beach, although she was bitten by a few ants. She also made sure to wear a shawl to protect her shoulders from the sun, since we've seen plenty of sun in the last week."
     ,par2: "Off in the distance, we could see where the coral broke the waves. Where we were at had almost no waves, so it was surprisingly quiet. "
-    },
+    }
+];
+
+const template =  
     {title: "TitleHere"
     ,author: "nat"
+    ,date: "2023-01-01T00:00:00.000Z"
     ,imag0: ""
     ,imag1: ""
     ,imag2: ""
     ,par0: ""
     ,par1: ""
     ,par2: ""
-    },
-];
+    }
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -93,14 +103,17 @@ function GridOfPosts() {
     function handleOpenPost(postNum){
         setActivePostData(posts[postNum]);
         setPostIsOpen(true);
+        localStorage.setItem("viewed-" + posts[postNum].title, true)
     }
 
     function handleClosePost(){
         setPostIsOpen(false);
     }
 
-    const articleCards = posts.map((post, index) =>
-    <ArticleCard data={post} handleOpenPost={() => handleOpenPost(index)}/>
+    const articleCards = posts
+    .sort((a, b) => a.date > b.date ? -1 : 1)
+    .map((post, index) =>
+        <ArticleCard data={post} handleOpenPost={() => handleOpenPost(index)}/>
     );
  
     

@@ -114,18 +114,18 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
                 </Container>
                 <IconButton
-            edge="start"
-            color="blue"
-            onClick={props.handleClosePost}
-            sx={{
-                position: 'fixed',
-                top: 0,
-                left: 20,
-            }}
-            aria-label="close"
-            >
-                <ArrowBackIcon sx={{ fontSize: 32, color: 'black' }} />
-            </IconButton>
+                edge="start"
+                color="blue"
+                onClick={props.handleClosePost}
+                sx={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 20,
+                }}
+                aria-label="close"
+                >
+                    <ArrowBackIcon sx={{ fontSize: 32, color: 'black' }} />
+                </IconButton>
             </Box>
   );
   }

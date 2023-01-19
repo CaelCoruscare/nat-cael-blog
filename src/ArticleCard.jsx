@@ -1,33 +1,52 @@
-import { Divider, Box, Card, Avatar, Skeleton, CardMedia, Typography, CardContent, Button, CardActions, Stack, CardActionArea, Fade } from "@mui/material";
+import { Box, IconButton, Divider, Badge, Card, Avatar, Skeleton, CardMedia, Typography, CardContent, Button, CardActions, Stack, CardActionArea, Fade } from "@mui/material";
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 
 import caelAvatar from './avatars/avatarCael.jpg'
 import natAvatar from './avatars/avatarNatalie.jpg'
+import eyeOpen from './pictures/eyes/eyeOpenCircleNoColor.png'
 import Image from 'mui-image'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useState } from 'react';
 
 
 function ArticleCard(props) {
   const avatar = (props.data.author === 'cael' ) ? caelAvatar : natAvatar;
   const { loading = false } = props;
+  const [isRead, setIsRead] = useState((localStorage.getItem("viewed-" + props.data.title)));
 
   return (
             <Grid2 xs={6} md={3} >
-              <Card elevation={3} sx={{ height: 1 }}>
+              
+  <Badge badgeContent={!isRead ? 
+                
+                  <Image
+                  height='4vh' 
+                  fit='cover'
+                  src={eyeOpen}
+                  duration={1800}/>
+                :<div></div>} >
 
-              <CardActionArea onClick={props.handleOpenPost}>
+              <Card elevation={3} sx={{ height: 1 }}>
+              
+              <CardActionArea onClick={()=>{setIsRead(true); props.handleOpenPost();}}>
                 
               {loading ? (
                     <Skeleton variant="rectangular" animation='wave' height='24vh'/>
                 )
                 :
                 (
+                  <Box>
                 <Image
                 height='24vh' 
                 fit='cover'
                 src={"/content/" + props.data.imag0}
-                duration={1800}
+                duration={1}
                 bgColor='#989f40'
                 />
+                
+                
+                
+                </Box>
                 )}
 
                 <CardContent >
@@ -57,6 +76,8 @@ function ArticleCard(props) {
 
                 </CardActionArea>
               </Card>
+              </Badge>
+              
             </Grid2>
           
   );
