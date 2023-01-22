@@ -106,7 +106,27 @@ const posts = [
     ,par0: "Suddenly, a densely packed crowd of tiny blue penguins barely 30 cm (12 inches) tall flopped ashore, landing on their bellies before using their flippers to stand up. Once on land, the graceful raft became a waddle and the penguins rushed across the open beach towards the vegetated dunes where we were sitting. (Cael's note: It's really hard to take pictures of penguins in the dark, with no flash allowed)"
     ,par1: "Once in the shelter of dune grass, their demeanor changed at once. Out in the open they had evoked the image of a tiny business man desperately trying to get to a meeting on time as they waddled/hopped across the sand. Now that they felt safe, the penguins seemed content to preen themselves and their partners, squabble and loiter at the bottom of the dune. One of our guides explained that with their chicks rapidly growing towards independence, the parents were not in a hurry to get home. We soon saw why when one of the penguins made its way up the hill, only to be tackled by the large chick waiting in the path. The youngster's strident begging calls were reinforced with pecks aimed at the back and hindquarters and flipper slaps. Eventually, the ravenous youngster's harried parent obliged and regurgitated a warm seafood soup into its waiting beak. The parent had to do this multiple times before the chick stopped screaming and thrashing. It apparently was not satisfied yet, because it kept going after every adult that passed until it finally found its other parent, who gave it second helpings of seafood chowder fresh from the crop. Begrudgingly, the almost spherical chick retreated into its nest box after the second parent refused to feed it anymore. It was already being weaned off of food brought by its parents, and soon the chick would molt its down and have to catch its own fish. This drama was repeated across the colony, with some parents having two boisterous chicks running after them and tackling them as they squabbled for the limited food available. (Cael's note: Another note on pictures. This was the clearest one I could get, because I needed a long capture time to make up for the lack of light. Trust me though, the baby was vicously attacking.)"
     ,par2: "I stayed to watch for some time, even after the cold overcame Cael, and I will never forget what a privilege it is to see such beautiful, endangered birds up close. They face the challenges of climate change, overfishing and pollution, but their numbers are on the rise on the Otago Peninsula because of the dedication of the amazing conservationists working for the Pukekura Penguin Trust, who have removed invasive predators like weasels and are revegetating the beaches to provide nesting sites. With our help, the kororā might just grace the shores of New Zealand for many years to come."
-  }
+  },
+  {title: "Kaka Point Beach"
+  ,author: "cael"
+  ,date: "2023-01-18T00:00:00.000Z"
+  ,imag0: "kakaPointBeach/seagull.jpeg"
+  ,imag1: "kakaPointBeach/seaweed.jpeg"
+  ,imag2: "kakaPointBeach/bee.jpeg"
+  ,par0: "We stopped on a beach just outside Kaka Point, for a chilly morning walk. Got a good picture of an endangered red billed seagull taking off. It was spooked by man wandering the rocky section of the beach. I think he was looking for clams and mussels."
+  ,par1: "Nat found a big chunk of rubbery seaweed called bull kelp. According to an info board we found, the Maori used to stitch them together and use them as their primary form of container. Like a clay pot."
+  ,par2: "On the walk back, I was finally able to get a good picture of on of the local bumble bees! I've been trying since we got here, but they're always on the move, because the wildflowers don't have much nectar or many flowers grouped together. The bumble bees look about three times the size of the ones near where I grew up, in the Northeast US. Fun fact: they don't have honeycombs, and instead build little wax pots, that look kind of like clay vessels."
+  },
+  {title: "Secret Tunnel, Secret Tunnnnnel"
+    ,author: "nat"
+    ,date: "2023-01-18T01:00:00.000Z"
+    ,imag0: "ghibliTunnel/natalieEnters.jpeg"
+    ,imag1: "ghibliTunnel/creepy.jpeg"
+    ,imag2: "ghibliTunnel/tunnelEnd.jpeg"
+    ,par0: "We found a hike that went through an old railway tunnel. Ever seen Spirited Away? Gave us big Spirited Away vibes... Don't worry though, the info placard says that only two people died while building the train line, and they both died a little further ahead, past the tunnel."
+    ,par1: "We didn't have a flashlight, so we used the flash on the camera as a light source, every couple seconds, to make sure we were walking the right way. I've never been somewhere so incredibly dark. You could see the entrance, far off behind you. And we could just make out the exit, although it never seemed to get larger. Eventually, the flash revealed something on the side of the wall. It was revealed by the camera flash, so I could only (barely) see an unexplained giant hole in the side of the tunnel, for a fraction of a second. Scared me pretty bad, and the camera suddenly refused to take any more pictures (\"processing\") so we were stuck in the darkness. We ended up going back to the car, although Natalie convinced me to get my phone from the car and use the flashlight to try again. The giant hole turned out to be made of masonry, and is probably a place where someone could hide if a train came through the tunnel, so they didn't get squished."
+    ,par2: "Here is the other end of the tunnel. Was quite a long walk to this point. It is beautiful though. Much more overgrown than the other side."
+    }
 ];
 
 const template =  

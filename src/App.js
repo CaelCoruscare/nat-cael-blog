@@ -18,7 +18,7 @@ function App() {
           Nat and Cael's Blog!
         </Typography>
         <Typography variant="h5" component="div" sx={{padding: 2, margin: 2}}>
-          Latest Status: At Maggie's Cafe working on the blog while we wait for news on our car.
+          Latest Status: Hiking up the Raikura trail. Will catch up on blog posts when we get a chance.
         </Typography>
       </Box>
 
