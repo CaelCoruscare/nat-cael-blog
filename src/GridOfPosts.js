@@ -118,7 +118,7 @@ const posts = [
   ,par2: "On the walk back, I was finally able to get a good picture of on of the local bumble bees! I've been trying since we got here, but they're always on the move, because the wildflowers don't have much nectar or many flowers grouped together. The bumble bees look about three times the size of the ones near where I grew up, in the Northeast US. Fun fact: they don't have honeycombs, and instead build little wax pots, that look kind of like clay vessels."
   },
   {title: "Secret Tunnel, Secret Tunnnnnel"
-    ,author: "nat"
+    ,author: "cael"
     ,date: "2023-01-18T01:00:00.000Z"
     ,imag0: "ghibliTunnel/natalieEnters.jpeg"
     ,imag1: "ghibliTunnel/creepy.jpeg"
@@ -126,7 +126,38 @@ const posts = [
     ,par0: "We found a hike that went through an old railway tunnel. Ever seen Spirited Away? Gave us big Spirited Away vibes... Don't worry though, the info placard says that only two people died while building the train line, and they both died a little further ahead, past the tunnel."
     ,par1: "We didn't have a flashlight, so we used the flash on the camera as a light source, every couple seconds, to make sure we were walking the right way. I've never been somewhere so incredibly dark. You could see the entrance, far off behind you. And we could just make out the exit, although it never seemed to get larger. Eventually, the flash revealed something on the side of the wall. It was revealed by the camera flash, so I could only (barely) see an unexplained giant hole in the side of the tunnel, for a fraction of a second. Scared me pretty bad, and the camera suddenly refused to take any more pictures (\"processing\") so we were stuck in the darkness. We ended up going back to the car, although Natalie convinced me to get my phone from the car and use the flashlight to try again. The giant hole turned out to be made of masonry, and is probably a place where someone could hide if a train came through the tunnel, so they didn't get squished."
     ,par2: "Here is the other end of the tunnel. Was quite a long walk to this point. It is beautiful though. Much more overgrown than the other side."
+    },
+    {title: "Wisp-River hike"
+    ,author: "cael"
+    ,date: "2023-01-18T02:00:00.000Z"
+    ,imag0: "wispHike/bridge.jpeg"
+    ,imag1: "wispHike/miromiro.jpeg"
+    ,imag2: "wispHike/rainbows.jpeg"
+    ,par0: "In the Catlins, we hiked the Wisp-River trail. We were low on water when we reached the trailhead, so we got a chance to try the water filter that my uncle Matt got us for Christmas. We used it on the river water flowing underneath the suspension bridge that you can see in the picture. Natalie suprised me, crossing the swaying and rusted bridge with no issue, despite her once severe fear of heights. We found a second, larger bridge, which was crossed as well, shortly before deciding to turn back. We were hungry, and had not had an opportunity to stock up on snacks, since the Catlins are rather sparsely populated."
+    ,par1: "We found this Miromiro on the trail. She showed no fear, and flitted about us, catching bugs and cocking her head to keep an eye on us. Made it easy to snap some excellent pictures, despite the low light of the thick forest."
+    ,par2: "On our way to our next destination, we took a wrong turn and drove past enough sheep to populate New York City three times over. It was well worth the detour though, since we saw this amazing double rainbow. By the time I had swapped lenses, there was not much left to the second rainbow, but you can see it if you look closely, on the left."
+    },
+    {title: "Nurseries at the Lighthouse"
+    ,author: "cael"
+    ,date: "2023-01-19T00:00:00.000Z"
+    ,imag0: "nurseriesByTheLighthouse/zoomedOut.jpeg"
+    ,imag1: "nurseriesByTheLighthouse/seaLions.jpeg"
+    ,imag2: "nurseriesByTheLighthouse/spoonBills.jpeg"
+    ,par0: "On our way to the lighthouse, we saw two sealife nurseries. The rock on the right has a nursery of young Royal Spoonbills, while the rock on the left is a playground and nursery for sea lion pups."
+    ,par1: "The sea lion pups are well camoflauged, although they were running all over the place like 4 year old humans, which counteracted the camoflauge pretty well. In this picture, I counted 8 baby sea lions. How many can you see?"
+    ,par2: "The Royal Spoonbills, pictured here, specialize in filtering small shrimps and other invertebrates out of marshes and estuaries. The parents were coming and going, so there were never many of the large birds on the rock at one time."
+    },
+    {title: "The Lighthouse"
+    ,author: "Cael"
+    ,date: "2023-01-19T01:00:00.000Z"
+    ,imag0: "lighthouse/islands.jpeg"
+    ,imag1: "lighthouse/tiny.jpeg"
+    ,imag2: "lighthouse/lighthouse.jpeg"
+    ,par0: "Out past the lighthouse, a string of islands jutted out of the water. They were bleak and majestic, and they took the breath away. Seagulls wheeled over them, sea lions clambered on them, and seaweed choked the sections where the tide and waves came and went. I've never seen such austere beauty in my life."
+    ,par1: "Even the smallest of the islands, upon zooming in, revealed awe inspiring patterns and colors."
+    ,par2: "Honestly, the lighthouse itself was by far the least interesting part of the hike. We barely glanced at it before pushing past to see the raw natural beauty."
     }
+
 ];
 
 const template =  
