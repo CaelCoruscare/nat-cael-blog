@@ -156,8 +156,50 @@ const posts = [
     ,par0: "Out past the lighthouse, a string of islands jutted out of the water. They were bleak and majestic, and they took the breath away. Seagulls wheeled over them, sea lions clambered on them, and seaweed choked the sections where the tide and waves came and went. I've never seen such austere beauty in my life."
     ,par1: "Even the smallest of the islands, upon zooming in, revealed awe inspiring patterns and colors."
     ,par2: "Honestly, the lighthouse itself was by far the least interesting part of the hike. We barely glanced at it before pushing past to see the raw natural beauty."
+    },
+    {title: "Catlins Mirror Lake"
+    ,author: "cael"
+    ,date: "2023-01-20T00:00:00.000Z"
+    ,imag0: "mirrorLakeCatlins/lake.jpeg"
+    ,imag1: "mirrorLakeCatlins/swamp.jpeg"
+    ,imag2: "mirrorLakeCatlins/tree.jpeg"
+    ,par0: "On our way to Invercargill, we made a few stops along the western side of the Catlins. One of them was this reflective pond, carved out by a glacier. Something about the tannins and the chemical content of the water made it jet black, and quite reflective. Reminded me of a few ponds I've seen in Northeast US while growing up."
+    ,par1: "At the waters edge, the soil transitioned to a soupy swamp. There were a lot of plants that specialized specifically in inhabiting this biome."
+    ,par2: "Further into the forest were a number of strange trees. Apparently they are adapted to regularly flooding when it rains. This one was twisted in a strange corkscrew."
+    },
+    {title: "Lost Gypsea"
+    ,author: "nat"
+    ,date: "2023-01-20T01:00:00.000Z"
+    ,imag0: "lostGypsy/art.jpeg"
+    ,imag1: "lostGypsy/natalie.jpeg"
+    ,imag2: "lostGypsy/Bus.jpeg"
+    ,par0: "We were pretty tired after our two morning hikes at Kaka Point and Nugget Point, and sort of downcast after failing to reach the Cathedral Caves before the high tide closed them, when we spotted a sheet metal sperm whale on the side of the road, and behind that a brightly colored caravan advertising coffee and snacks. The sign declared that we were arriving at The Lost Gypsy, and we saw that in addition to the coffee caravan there was a small building that served as a giftshop and next to that a garden of strange sculptures. There was a crank near the metal whale, and when we turned it we watched in amazement as the segments of metal moved and the whale swam through the air. Intrigued, we decided to stay a while and ordered a chai latte and a flat white with a ginger slice to split and sat at a little table with books of New Zealand slang and jokes on top of it. The slice was sweet and tasty and the hot drinks felt nice after all the wind at Nuggget Point." 
+    ,par1: "While we were finishing our chai lattes, we noticed a button with a sign reading \"There are many temptations in life... the button below is one of them.\" Now some people may have been able to ignore this, but we were not up to the challenge, having the self control of a pair toddlers doing a marshmallow test. Pushing the button caused one of the strange masks set into the wall to open ans squirt us with water. Once we had finished our drinks, we entered the bus and found a plethora of strange, beautiful little kinetic sculptures made of found materials. We were invited to crank the handles on the side, which animated the junk sculptures in all sorts of ways. (Cael's note: There were a lot of people in the bus, so I didn't want to hog space and to take pictures. The only picture of the bus that I got was this one of the outside)"
+    ,par2: "Cael and I watched as little metal flowers opened and closed and tiny unicyclists made their way across a miniature highwire, and marveled as pulling one level caused a model train to chug its way across the ceiling. The artist responsible for the little wonders emerged from the backroom with a small greeen and gray parrot perched on his shoulder. He greeted us warmly and invited us to browse the curiosities on the shelves. Afraid of trying to transport such delicate mechanical devices in our backpacks, Cael and I settled on a necklace made with a river pebble, two postcards, and a pair of tickets into the strange garden we had seen when we had arrived at The Lost Gypsy..."
+    },
+    {title: "Lost Gypsey Garden"
+    ,author: "nat"
+    ,date: "2023-01-01T00:00:00.000Z"
+    ,imag0: ""
+    ,imag1: ""
+    ,imag2: ""
+    ,par0: "After purchasing tickets from the man with the parrot, we opened the gates of the Lost Gypsey Garden and entered a paradise of sensory exploration. Turning cranks caused huge disco balls (made of pieces of salvaged mirrors) to revolve high above us. Tentacles made of painted tin cans thrashed out of the underbrush. Snail shells on huge waterwheels dumped water into a Rube Goldberg machine of old boots and bottles until strange music sounded from the center of the machine."
+    ,par1: "under a series of gazebos, we found less waterproof contraptions. A piano was hooked up to about 100 different random sound producers, from tape rewinders to hairdryers, each mapped to a different tone. Lightning from a tesla coil completed the sculpture of a gull in flight. Sitting in an old hair salon chair caused the strange booming mating call of the endangered Kakapo parrot to sound in your ears. There were bizarre interactive art pieces everywhere we turned, and we excitedly tried them all. My favorite was an old Grampohone with gulls in the trumpet. When the crank was turned the gulls flew gracefully while the sounds of the crashing sea and gull cries issued from the gramophone."
+    ,par2: "The Lost Gypsy was interactive, fun, and incredibly unique. A must-see for travelers in the Catlins who have a taste for the weird."
+    },
+    {title: "Steward Island Pigeons"
+    ,author: "cael"
+    ,date: "2023-01-22T00:00:00.000Z"
+    ,imag0: "stewardPigeons/smooth.jpeg"
+    ,imag1: "stewardPigeons/floof.jpeg"
+    ,imag2: "stewardPigeons/head.jpeg"
+    ,par0: "The Kererū, the pidgeons of New Zealand, are wonderful. They seem to have taken the opportunity of having no predators to become quite large. They typically measure 50cm, or 20 inches. Living in the cold climate, they also became quite fluffy. The only part of their anatomy that did not grow much seems to be their heads."
+    ,par1: "In the frigid morning air, the Kererū will land somewhere in the sunlight (highly visible) and fluff their feathers. This makes them appear to more than double in size. With their tiny heads just poking over their massive chests, they remind me of a body builder or a cartoon of a big buff knight."
+    ,par2: "At over a foot and a half, they are quite conspicuous, and you can hear their wingbeats from a long ways off. They like landing in trees with berries, and are surprisingly agile at climbing through branches, reaching their neck out pluck berry after berry from the branch."
     }
 
+
+    
 ];
 
 const template =  
