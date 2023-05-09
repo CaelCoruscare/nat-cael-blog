@@ -5,26 +5,44 @@ import Image from 'mui-image'
 import Slide from '@mui/material/Slide';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useEffect, useState } from 'react'
 
 import caelAvatar from './avatars/avatarCael.jpg'
 import natAvatar from './avatars/avatarNatalie.jpg'
 
 
 function BlogPost(props) {
-  const avatar = (props.data.author === 'cael' ) ? caelAvatar : natAvatar;
-  const [open, setOpen] = React.useState(false);
-  const { loading = false } = props;
+    const avatar = (props.data.author === 'cael' ) ? caelAvatar : natAvatar;
+    const [open, setOpen] = React.useState(false);
+    const { loading = false } = props;
 
-  
-const Transition = React.forwardRef(function Transition(props, ref) {
-    return <Slide direction="up" ref={ref} {...props} />;
-  });
+    const Transition = React.forwardRef(function Transition(props, ref) {
+        return <Slide direction="up" ref={ref} {...props} />;
+    });
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+    const [post, setPost] = useState([]);
 
-  return (
+    const fetchPostData = () => {
+        fetch("http://127.0.0.1:8000/post/".concat(props.data.id) )
+        .then(response => {
+            return response.json()
+        })
+        .then(data => {
+            setPost(data)
+            console.log(data)
+        })
+    }
+
+    useEffect(() => {
+        fetchPostData()
+        }, [])
+        
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    return (
           
             <Box
             sx={{
